@@ -1,19 +1,19 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: analytics
+  name: go-seed
   labels:
-    app: analytics
+    app: go-seed
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: analytics
+        app: go-seed
     spec:
       containers:
-        - image: appscode/analytics:canary
-          name: analytics
+        - image: appscode/go-seed:canary
+          name: go-seed
           ports:
             - containerPort: 9844
               name: web
@@ -22,13 +22,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: analytics
+  name: go-seed
   labels:
-    app: analytics
+    app: go-seed
 spec:
   ports:
   - port: 9844
     protocol: TCP
     targetPort: web
   selector:
-    app: analytics
+    app: go-seed

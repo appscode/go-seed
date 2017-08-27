@@ -11,8 +11,8 @@ import (
 
 func NewRootCmd(version string) *cobra.Command {
 	cmd := &cobra.Command{
-		Use:               "analytics [command]",
-		Short:             `Analytics by AppsCode - Essential analytics for OSS`,
+		Use:               "go-seed [command]",
+		Short:             `Go-seed by AppsCode - Essential go-seed for OSS`,
 		DisableAutoGenTag: true,
 		PersistentPreRun: func(c *cobra.Command, args []string) {
 			c.Flags().VisitAll(func(flag *pflag.Flag) {

@@ -36,10 +36,10 @@ import sys
 import yaml
 from os.path import expandvars, join, dirname
 
-libbuild.REPO_ROOT = expandvars('$GOPATH') + '/src/github.com/appscode/analytics'
+libbuild.REPO_ROOT = expandvars('$GOPATH') + '/src/github.com/appscode/go-seed'
 BUILD_METADATA = libbuild.metadata(libbuild.REPO_ROOT)
 libbuild.BIN_MATRIX = {
-    'analytics': {
+    'go-seed': {
         'type': 'go',
         'go_version': True,
         'distro': {
@@ -77,17 +77,17 @@ def version():
 
 
 def fmt():
-    libbuild.ungroup_go_imports('*.go', 'pkg')
-    die(call('goimports -w *.go pkg'))
-    call('gofmt -s -w *.go pkg')
+    libbuild.ungroup_go_imports('*.go', 'analytics', 'clientip', 'cmds', 'server')
+    die(call('goimports -w *.go analytics clientip cmds server'))
+    call('gofmt -s -w *.go analytics clientip cmds server')
 
 
 def vet():
-    call('go vet *.go ./pkg/...')
+    call('go vet *.go ./...')
 
 
 def lint():
-    call('golint *.go ./pkg/...')
+    call('golint *.go ./...')
 
 
 def gen():

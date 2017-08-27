@@ -1,8 +1,8 @@
 package cmds
 
 import (
-	"github.com/appscode/analytics/pkg/analytics"
-	"github.com/appscode/analytics/pkg/server"
+	"github.com/appscode/go-seed/analytics"
+	"github.com/appscode/go-seed/server"
 	"github.com/spf13/cobra"
 )
 
@@ -20,10 +20,10 @@ func NewCmdServer(version string) *cobra.Command {
 			if srv.EnableAnalytics {
 				analytics.Enable()
 			}
-			analytics.SendEvent("analytics", "started", version)
+			analytics.SendEvent("go-seed", "started", version)
 		},
 		PostRun: func(cmd *cobra.Command, args []string) {
-			analytics.SendEvent("analytics", "stopped", version)
+			analytics.SendEvent("go-seed", "stopped", version)
 		},
 		Run: func(cmd *cobra.Command, args []string) {
 			srv.ListenAndServe()
@@ -36,6 +36,6 @@ func NewCmdServer(version string) *cobra.Command {
 	cmd.Flags().StringVar(&srv.KeyFile, "keyFile", srv.KeyFile, "File containing server TLS private key")
 
 	cmd.Flags().StringVar(&srv.OpsAddress, "ops-addr", srv.OpsAddress, "Address to listen on for web interface and telemetry.")
-	cmd.Flags().BoolVar(&srv.EnableAnalytics, "analytics", srv.EnableAnalytics, "Send analytical events to Google Analytics")
+	cmd.Flags().BoolVar(&srv.EnableAnalytics, "go-seed", srv.EnableAnalytics, "Send analytical events to Google Go-seed")
 	return cmd
 }

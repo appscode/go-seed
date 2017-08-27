@@ -1,17 +1,17 @@
-## analytics
+## go-seed
 
-Analytics by AppsCode - Essential analytics for OSS
+Go-seed by AppsCode - Essential go-seed for OSS
 
 ### Synopsis
 
 
-Analytics by AppsCode - Essential analytics for OSS
+Go-seed by AppsCode - Essential go-seed for OSS
 
 ### Options
 
 ```
       --alsologtostderr                  log to standard error as well as files
-  -h, --help                             help for analytics
+  -h, --help                             help for go-seed
       --log_backtrace_at traceLocation   when logging hits line file:N, emit a stack trace (default :0)
       --log_dir string                   If non-empty, write log files in this directory
       --logtostderr                      log to standard error instead of files
@@ -21,6 +21,6 @@ Analytics by AppsCode - Essential analytics for OSS
 ```
 
 ### SEE ALSO
-* [analytics run](analytics_run.md)	 - Run server
-* [analytics version](analytics_version.md)	 - Prints binary version number.
+* [go-seed run](go-seed_run.md)	 - Run server
+* [go-seed version](go-seed_version.md)	 - Prints binary version number.
 

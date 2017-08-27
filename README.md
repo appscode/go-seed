@@ -1,4 +1,4 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/appscode/analytics)](https://goreportcard.com/report/github.com/appscode/analytics)
+[![Go Report Card](https://goreportcard.com/badge/github.com/appscode/go-seed)](https://goreportcard.com/report/github.com/appscode/go-seed)
 
 [Website](https://appscode.com) • [Slack](https://slack.appscode.com) • [Twitter](https://twitter.com/AppsCodeHQ)
 

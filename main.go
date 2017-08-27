@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/appscode/analytics/pkg/cmds"
+	"github.com/appscode/go-seed/cmds"
 	logs "github.com/appscode/log/golog"
 )
 

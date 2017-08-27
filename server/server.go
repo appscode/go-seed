@@ -8,7 +8,7 @@ import (
 	_ "net/http/pprof"
 	"time"
 
-	"github.com/appscode/analytics/pkg/clientip"
+	"github.com/appscode/go-seed/clientip"
 	"github.com/appscode/log"
 	"github.com/appscode/pat"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

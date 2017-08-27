@@ -1,20 +1,26 @@
-## analytics version
+## go-seed run
 
-Prints binary version number.
+Run server
 
 ### Synopsis
 
 
-Prints binary version number.
+Run server
 
 ```
-analytics version [flags]
+go-seed run [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help   help for version
+      --caCertFile string    File containing CA certificate
+      --certFile string      File container server TLS certificate
+      --go-seed              Send analytical events to Google Go-seed (default true)
+  -h, --help                 help for run
+      --keyFile string       File containing server TLS private key
+      --ops-addr string      Address to listen on for web interface and telemetry. (default ":56790")
+      --web-address string   Http server address (default ":9844")
 ```
 
 ### Options inherited from parent commands
@@ -30,5 +36,5 @@ analytics version [flags]
 ```
 
 ### SEE ALSO
-* [analytics](analytics.md)	 - Analytics by AppsCode - Essential analytics for OSS
+* [go-seed](go-seed.md)	 - Go-seed by AppsCode - Essential go-seed for OSS
 

@@ -8,28 +8,28 @@ GOPATH=$(go env GOPATH)
 SRC=$GOPATH/src
 BIN=$GOPATH/bin
 ROOT=$GOPATH
-REPO_ROOT=$GOPATH/src/github.com/appscode/analytics
+REPO_ROOT=$GOPATH/src/github.com/appscode/go-seed
 
 source "$REPO_ROOT/hack/libbuild/common/lib.sh"
 source "$REPO_ROOT/hack/libbuild/common/public_image.sh"
 
 APPSCODE_ENV=${APPSCODE_ENV:-dev}
-IMG=analytics
+IMG=go-seed
 
-DIST=$GOPATH/src/github.com/appscode/analytics/dist
+DIST=$GOPATH/src/github.com/appscode/go-seed/dist
 mkdir -p $DIST
 if [ -f "$DIST/.tag" ]; then
 	export $(cat $DIST/.tag | xargs)
 fi
 
 clean() {
-    pushd $GOPATH/src/github.com/appscode/analytics/hack/docker
-    rm analytics Dockerfile
+    pushd $GOPATH/src/github.com/appscode/go-seed/hack/docker
+    rm go-seed Dockerfile
     popd
 }
 
 build_binary() {
-    pushd $GOPATH/src/github.com/appscode/analytics
+    pushd $GOPATH/src/github.com/appscode/go-seed
     ./hack/builddeps.sh
     ./hack/make.py build
     detect_tag $DIST/.tag
@@ -37,9 +37,9 @@ build_binary() {
 }
 
 build_docker() {
-    pushd $GOPATH/src/github.com/appscode/analytics/hack/docker
-    cp $DIST/analytics/analytics-alpine-amd64 analytics
-    chmod 755 analytics
+    pushd $GOPATH/src/github.com/appscode/go-seed/hack/docker
+    cp $DIST/go-seed/go-seed-alpine-amd64 go-seed
+    chmod 755 go-seed
 
     cat >Dockerfile <<EOL
 FROM alpine
@@ -47,15 +47,15 @@ FROM alpine
 RUN set -x \
   && apk add --update --no-cache ca-certificates
 
-COPY analytics /usr/bin/analytics
+COPY go-seed /usr/bin/go-seed
 
 USER nobody:nobody
-ENTRYPOINT ["analytics"]
+ENTRYPOINT ["go-seed"]
 EOL
     local cmd="docker build -t appscode/$IMG:$TAG ."
     echo $cmd; $cmd
 
-    rm analytics Dockerfile
+    rm go-seed Dockerfile
     popd
 }
 

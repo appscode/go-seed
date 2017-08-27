@@ -14,17 +14,17 @@ contribution. See the [DCO](DCO) file for details.
 
 ## Developer Guide
 We have a [Developer Guide](/docs/developer-guide/README.md) that outlines everything you need to know from setting up your
-dev environment to how to build and test Analytics. If you find something undocumented or incorrect along the way,
+dev environment to how to build and test Go-seed. If you find something undocumented or incorrect along the way,
 please feel free to send a Pull Request.
 
 ## Getting Help
-If you have a question about Analytics or having problem using it, you can contact us on our public Slack channel. Follow [this link](https://slack.appscode.com) to get invitation to our Slack channel.
+If you have a question about Go-seed or having problem using it, you can contact us on our public Slack channel. Follow [this link](https://slack.appscode.com) to get invitation to our Slack channel.
 
 ## Bugs/Feature request
-If you have found a bug with Analytics or want to request for new features, please [file an issue](https://github.com/appscode/Analytics/issues/new). 
+If you have found a bug with Go-seed or want to request for new features, please [file an issue](https://github.com/appscode/Go-seed/issues/new). 
 
 ## Contribution Flow
-If you fix a bug or developed a new feature, feel free to submit a PR. In either case, please file a [Github issue]((https://github.com/appscode/analytics/issues/new)) first, so that we can have a discussion on it. This is a rough outline of what a contributor's workflow looks like:
+If you fix a bug or developed a new feature, feel free to submit a PR. In either case, please file a [Github issue]((https://github.com/appscode/go-seed/issues/new)) first, so that we can have a discussion on it. This is a rough outline of what a contributor's workflow looks like:
 
 - Create a topic branch from where you want to base your work (usually master).
 - Make commits of logical units.
@@ -35,4 +35,4 @@ If you fix a bug or developed a new feature, feel free to submit a PR. In either
 Thanks for your contributions!
 
 ## Spread the word
-If you have written blog post or tutorial on Analytics, please share it with us on [Twitter](https://twitter.com/AppsCodeHQ) or [Slack](https://slack.appscode.com).
+If you have written blog post or tutorial on Go-seed, please share it with us on [Twitter](https://twitter.com/AppsCodeHQ) or [Slack](https://slack.appscode.com).

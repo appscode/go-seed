@@ -1,4 +1,4 @@
-package: github.com/appscode/analytics
+package: github.com/appscode/go-seed
 import:
 - package: github.com/appscode/go
 - package: github.com/appscode/log
