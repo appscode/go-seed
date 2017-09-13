@@ -46,7 +46,7 @@ To build and push your custom Docker image, follow the steps below. To release a
 
 ```console
 # Build Docker image
-$ ./hack/docker/go-seed/setup.sh; ./hack/docker/go-seed/setup.sh push
+$ ./hack/docker/setup.sh; ./hack/docker/setup.sh push
 
 # Add docker tag for your repository
 $ docker tag appscode/go-seed:<tag> <image>:<tag>
